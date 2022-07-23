@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'VCR_OSD_MONO.ttf';
+    src: url(../assets/fonts/VCR_OSD_MONO.ttf);
+}
+
+$font-osd: 'VCR_OSD_MONO.ttf';
+
+@keyframes background-error {
+    from {
+        background-color: #2d1b2e;
+    }
+
+    to {
+        background-color: #1a1a1a;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.error_window {
+    width: 100%;
+    height: 100%;
+    background-color: #2d1b2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    animation-name: background-error;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+    .error_container {
+        width: 80%;
+        height: 80%;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 1px;
+        }
+
+        .error {
+            font-family: $font-osd;
+            font-size: 20px;
+
+            a{
+                color: white;
+            }
+        }
+
+
+    }
+
+    .loading_container {
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// pequena edição do window
+
+@keyframes background-switch {
+    from {
+        background-color: #77477b;
+    }
+
+    to {
+        background-color: #1a1a1a;
+    }
+}
+
+.container_cont- {
+    background-color: #77477b;
+    width: 100%;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    animation-name: background-switch;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+    .window {
+        background-color: #2d1b2e;
+        width: 80vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        border-left: 5px solid #2d1b2e;
+        border-bottom: 5px solid #2d1b2e;
+        border-right: 5px solid #2d1b2e;
+
+        .header_window {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4px;
+
+            .logo_window {
+                background-color: #2d1b2e;
+                width: 100%;
+                height: 23px;
+                font-size: 30px;
+                color: white;
+                display: flex;
+                align-items: center;
+
+                .icon_folder {
+                    width: 23.5px;
+                }
+
+                .title_window {
+                    margin-left: 8px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    .titles_paths {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+    }
+}

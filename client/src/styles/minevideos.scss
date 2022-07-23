@@ -1,0 +1,123 @@
+$fonte-padro: "font-wendy-pixelizada";
+
+.videos_window {
+    background-color: #2d1b2e;
+    width: 100%;
+    height: 89vh;
+    overflow: auto;
+
+    .container_videos {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        padding: 2% 5% 5% 5%;
+        color: black;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(100, 91, 91, 0.445);
+        }
+
+        .loading_container {
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container_addvideo_save {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            .addvideo_link {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                .title_saved_link {
+                    font-size: 30px;
+                    color: white;
+                }
+
+                .img_saved_link {
+                    margin-right: 20px;
+                    width: 60px;
+
+                    &:hover {
+                        transform: translateY(8px);
+                    }
+                }
+            }
+
+        }
+
+        .videos {
+            display: grid;
+            grid-gap: 16px;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fill, 300px);
+
+            .minevideos_videos_alert {
+                color: white;
+                font-size: 30px;
+            }
+
+            .container_video {
+                .video {
+                    height: 210px;
+                    overflow: hidden;
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+ 
+                    .img_videos {
+                        width: 300px;
+                    }
+
+                    .title_video {
+                        color: rgb(255, 255, 255);
+                        font-size: 25px;
+                        line-height: 90%;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                    }
+                }
+
+                .container_buttons {
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .donwload_video{
+                        color: white;
+                        font-size: 15px;
+                        margin-top: 5px;
+                        border: solid white;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        text-decoration: none;
+                        // background-color: yellow;
+                    }
+
+                    .delete_video {
+                        cursor: pointer;
+                        margin-top: 5px;
+                        border: none;
+                        background-color: red;
+                        color: white;
+                        font-size: 15px;
+                        font-family: $fonte-padro;
+                    }
+                }
+            }
+        }
+    }
+}
