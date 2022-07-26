@@ -44,7 +44,7 @@ Projeto foi hospedado no Heroku. Acesse o **MineData** desenvolvido [clicando aq
 **Clone este repositório**
 
 ```bash
-git clone https://github.com/vitorsemidio-dev/ignite-todo-list.git
+git clone https://github.com/Pol4rLun4r/minedata
 ```
 
 **Acesse a pasta**
